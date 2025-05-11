@@ -1,4 +1,4 @@
-package com.ebsolutions.shells.springboot;
+package com.ebsolutions.projects.java.springboot.authentication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

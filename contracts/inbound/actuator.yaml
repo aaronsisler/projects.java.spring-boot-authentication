@@ -41,13 +41,13 @@ components:
       properties:
         group:
           type: string
-          example: "com.ebsolutions.shells"
+          example: "com.ebsolutions.projects.java"
         artifact:
           type: string
-          example: "springboot-service"
+          example: "spring-boot-authentication-service"
         name:
           type: string
-          example: "Shell Springboot Service"
+          example: "Spring Boot Authentication Service"
         time:
           type: string
           format: date-time

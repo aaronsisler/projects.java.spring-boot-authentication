@@ -1,4 +1,4 @@
-package com.ebsolutions.shells.springboot.config;
+package com.ebsolutions.projects.java.springboot.authentication.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.Arrays;
