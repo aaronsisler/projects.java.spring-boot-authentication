@@ -1,5 +1,6 @@
 package com.ebsolutions.projects.java.springboot.authentication.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -11,11 +12,15 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class WebSecurityConfig {
+  private final CorsConfig corsConfig;
+
   @Bean
-  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    return http
-        .cors(AbstractHttpConfigurer::disable)
+  public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+    return httpSecurity
+        // Locking down which sites and IPs can call this service
+        .cors(c -> c.configurationSource(corsConfig))
         .csrf(AbstractHttpConfigurer::disable)
         // Used to specify that Spring Security does not create or access a session
         .sessionManagement(
