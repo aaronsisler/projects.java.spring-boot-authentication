@@ -4,7 +4,8 @@
 
 - DONE: HTTPS
 - Adding in Auth
-- No auth for health
-- No auth for info
-- Auth for /test
+- DONE: No auth for health
+- DONE: No auth for info
+- DONE: Auth for /test
+- Figuring out what is needed to actually "authenticate" to /test
 - Caching Auth in local EH Cache
